@@ -1,0 +1,1485 @@
+$white: #fff;
+$red-navbar: #ac0b11; 
+$red-light: #e5050c;
+$red-med: #ac0011;
+$red-dark: #a12008;
+$red-base: #cf0c12;
+$header-color: #ad1e2c;
+$gray: #777;
+$gray-light: #ccc;
+$facebook-color: #3b5998;
+$twitter-color: #00acee;
+$pintrest-color: #cb2028;
+$youtube-color: #bc0001;
+$footer-link-color: #ddc1a8;
+$copyright_color: #a37d71;
+
+
+@font-face {
+	font-family: 'PFDinTextPro-Medium';
+	src: url('../fonts/pfdintextpro-medium-webfont.eot');
+	src: url('../fonts/pfdintextpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/pfdintextpro-medium-webfont.woff2') format('woff2'),
+		 url('../fonts/pfdintextpro-medium-webfont.woff') format('woff'),
+		 url('../fonts/pfdintextpro-medium-webfont.ttf') format('truetype'),
+		 url('../fonts/pfdintextpro-medium-webfont.svg#PFDinTextPro-Medium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'pf_din_text_comp_promedium';
+  src: url("../fonts/pfdintextcomppro-medium-webfont.eot");
+  src: url("../fonts/pfdintextcomppro-medium-webfont.eot?#iefix") format("embedded-opentype"), 
+  	   url("../fonts/pfdintextcomppro-medium-webfont.woff2") format("woff2"), 
+  	   url("../fonts/pfdintextcomppro-medium-webfont.ttf") format("truetype"), 
+  	   url("../fonts/pfdintextcomppro-medium-webfont.svg#pf_din_text_comp_promedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: 'bebas_neueregular';
+	src: url('../fonts/BebasNeue-Regular-webfont.eot');
+	src: url('../fonts/BebasNeue-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/BebasNeue-Regular-webfont.woff2') format('woff2'),
+		 url('../fonts/BebasNeue-Regular-webfont.woff') format('woff'),
+		 url('../fonts/BebasNeue-Regular-webfont.ttf') format('truetype'),
+		 url('../fonts/BebasNeue-Regular-webfont.svg#bebas_neueregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background: url(../img/wood-pattern.jpg);
+	font: 100% Verdana, Arial, helvetica, sans-serif;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+img {width: 100%;}
+
+a {
+	text-decoration: none;
+}
+a:focus, a:hover {
+	color: $white;
+	text-decoration: none;
+}
+p {
+	color: $gray;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'PFDinTextPro-Medium';
+	font-weight: 100;
+}
+h2 {
+	font-size: 46px;
+}
+
+
+.container {
+	background: $white;
+	box-shadow: 6px 3px 10px -2px #c5a477, -6px 0 10px -2px #c5a477;
+	margin: 0 auto;
+	max-width: 1550px;
+	padding: 0;
+	position: relative;
+	width: 81.45%;
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+}
+.bdg-logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 689px;
+	z-index: 210;
+	@media (min-width: 1024px) and (max-width: 1280px) {
+		left: -163px;
+		width: 626px;
+	}
+	@media (max-width: 1024px) {
+		left: -100px;
+	}
+	@media (min-width: 320px) and (max-width: 680px) {
+		width: 572px;
+	}
+	@media (max-width: 359px) {
+		left: -83px;
+		width: 480px;
+	}
+}
+
+
+/***************************************** 
+	       	NAVIGATION 
+******************************************/
+
+.navbar {
+	background: $red-navbar;
+	box-shadow: 0 20px 20px -20px rgba(0,0,0,1);
+	border: 0;
+	border-radius: 0;
+	margin: 0; 
+}
+.nav {
+	margin: 0 auto;
+	max-width: 1550px;
+	height: 78px;
+	position: relative;
+	width: 81.45%;
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+}
+.nav-main {
+	float: right;
+	padding-right: 81px;
+	@media (max-width: 1440px) {
+		padding-right: 15px;
+	}
+	@media (min-width: 1024px) and (max-width: 1280px) {
+		padding-right: 10px;
+		z-index: 100;
+	}
+	@media (max-width: 1024px) {
+		display: none;
+	}
+	ul {
+		font-size: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+      li {
+      	display: inline-block;
+      	&:hover > .mega-menu {display: block;}
+      	&:hover > a {
+		 	background: url(../img/nav-rollover.png) 50% 0 no-repeat;
+		 }
+      	a {
+      	 color: $white;
+      	 display: block;
+		 font: bold 26px "bebas_neueregular";
+		 height: 78px;
+		 line-height: 2.8;
+		 padding: 0 18px;
+		 position: relative;
+		 text-transform: uppercase;
+		 z-index: 200;
+		 &:hover {
+		 	background: url(../img/nav-rollover.png) 50% 0 no-repeat;
+		 }
+		 @media (max-width: 1440px) {
+		 	padding: 0 10px;
+		 }
+		 @media (min-width: 1024px) and (max-width: 1280px) {
+		 	font-size: 24px;
+		    line-height: 3;
+		    padding: 0 9px;
+		 }
+      	}
+      }
+	}
+}
+.nav-icon {
+		background: $red-navbar;
+		border-radius: 5px;
+		border: 1px $red-light solid;
+		color: $white;
+		cursor: pointer;
+		display: none;
+		float: right;
+		margin-top: 15px;
+		padding: 6px 14px;
+		@media (max-width: 1024px) {
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			z-index: 220;
+		}
+		i {
+			color: $white;
+			font-size: 2em;
+		}
+}
+/****************************************
+			MEGA MENU
+*****************************************/
+.nav-main {
+	ul {
+		li {
+			> .mega-menu {
+				background: $white;
+				background:rgba(255,255,255,0.95);
+				box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), 0 20px 20px -20px rgba(0,0,0,1);
+				display: none;
+				margin: 0;
+				padding: 70px 0;
+				position: absolute;
+				top: 78px;
+				left: 0;
+			 	width: 100%;
+			 	z-index: 200;
+			 	ul {
+			 	padding: 0 80px;
+			 	float: left;
+			 		li {
+			 			margin: 0 0;
+			 			padding: 8px 8px 0;
+			 			&:last-child {margin-right: 0;}
+			 			&:hover {background: #ddd;}
+					 	a {
+					 		background: none;
+					 		color: $header-color;
+					 		height: auto;
+					 		padding: 0;
+					 		text-align: right;
+					 		&:hover {
+					 			background: none;
+					 			color: $red-light;
+					 		}
+					 	}
+				 	}
+			    }
+			}
+		}
+	}
+}
+
+
+
+/****************************************
+			HERO UNITS 
+*****************************************/
+.hero {
+	background: url(../img/hero.jpg) no-repeat;
+	box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+	height: 752px;
+	padding: 0;
+	@media (max-width: 1024px) {
+		background-position: 30% 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 100%;
+	}
+	@media (min-width: 320px) and (max-width: 680px) {
+		background: url(../img/family-hero-mobile.jpg) 0 -90px no-repeat;
+	}
+	.hero-caption {
+		color: $white;
+		padding: 128px 0 41px 11%;
+		width: 615px;
+		p {margin: 0;}
+		@media (min-width: 320px) and (max-width: 680px) {
+			padding: 360px 0 35px 0;
+		}
+		@media (max-width: 359px) {
+			 padding: 50px 0 40px 28px;
+		}
+		@media (max-width: 320px) {
+			padding: 360px 0 35px 0;
+		}
+		h1 {
+			font-size: 0;
+         	margin: 0;
+		 	.text-one {font-size: 78px; padding-left: 70px; letter-spacing: -2px;}
+		 	.text-two {font-size: 44px; padding-left: 109px; line-height: 0; letter-spacing: -1px;}
+		 	.text-three {font-size: 130px; line-height: 108px; letter-spacing: -7px; padding-left: 6px;}
+		 	.text-four {font-size: 215px; padding-left: 92px; line-height: 69px; letter-spacing: -17px;}
+		 	@media (min-width: 320px) and (max-width: 680px) {
+		  		.text-one {font-size: 55px; padding-left: 45px; letter-spacing: -2px;}
+		  		.text-two {font-size: 28px; padding-left: 77px; line-height: 0; letter-spacing: -1px;}
+		  		.text-three {font-size: 93px; line-height: 84px; padding-left: 0;}
+		  		.text-four {font-size: 143px; line-height: 49px; letter-spacing: -10px; padding-left: 58px;}
+		 	}
+		 	@media (max-width: 359px) {
+		 		.text-one {font-size: 60px; padding-left: 40px;}
+				.text-two {font-size: 36px; padding-left: 34px;}
+				.text-three {font-size: 80px; line-height: 94px;}
+				.text-four {font-size: 120px; line-height: 36px; padding-left: 30px;}
+		 	}
+		 	@media (max-width: 320px) {
+		 		.text-one {font-size: 50px;}
+		 		.text-two {font-size: 28px; padding-left: 77px; line-height: 0; letter-spacing: -1px;}
+				.text-three {font-size: 73px; line-height: 71px; padding-left: 0;}
+				.text-four {font-size: 108px; line-height: 41px; letter-spacing: -10px; padding-left: 54px;}
+		 	}
+		}
+	}
+}
+.featured-hero {
+	background: url(../img/featured-recipe-hero.jpg) no-repeat;
+	color: $white;
+	height: 678px;
+	padding: 0;
+	@media (min-width: 320px) and (max-width: 680px) {
+		background: url(../img/featured-hero-mobile.jpg) no-repeat;
+		height: 777px;
+		padding: 0 15px;
+	}
+	.featured-caption {
+		padding: 0 0 0 7%;
+		@media (min-width: 320px) and (max-width: 680px) {
+			padding: 0;
+		}
+		h2 {
+			font: 253px 'pf_din_text_comp_promedium';
+			font-weight: 100;
+			letter-spacing: -16px;
+			line-height: 82px;
+			margin: 0;
+			width: 360px;
+		@media (min-width: 320px) and (max-width: 680px) {
+			color: $red-dark;
+			font-size: 233px;
+			line-height: 74px;
+		}
+		@media (max-width: 320px) {
+			color: $red-dark;
+			font-size: 215px;
+			line-height: 74px;
+		}
+		span {
+			font-size: 68px;
+			letter-spacing: -2px;
+			margin-left: 115px;
+			@media (min-width: 320px) and (max-width: 680px) {
+				color: $red-base;
+				font-size: 60px;
+			}
+			@media (max-width: 320px) {
+				color: $red-base;
+				font-size: 53px;
+			}
+		  }
+	 	}
+		h3 {
+		 	font: 57px 'pf_din_text_comp_promedium';
+		 	line-height: 45px;
+		 	margin: 50px 0 0 0;
+		 	@media (min-width: 320px) and (max-width: 680px) {
+		 		color: $red-base;
+				font-size: 54px;
+		 	}
+		 	@media (max-width: 320px) {
+		 		color: $red-base;
+		   		font-size: 54px;
+		 	}
+		 	i {
+		 		font-size: 35px;
+		 		margin-left: 10px;
+		 	}
+	 	}
+  	  }
+  	  .cta-clear {
+	 	@media (min-width: 320px) and (max-width: 680px) {
+	 		margin: 323px auto 0;
+	    	width: 100%;
+	 	}
+	 }	
+}
+.story-hero {
+	background: url(../img/our-story.jpg) no-repeat;
+	background-position: 100%;
+	color: $white;
+	height: 745px;
+	text-align: center;
+	position: relative;
+	padding: 0;
+	@media (max-width: 1024px) {
+		background-position: 75%;
+	}
+	@media (min-width: 320px) and (max-width: 680px) {
+		background: url(../img/our-story-mobile.jpg) no-repeat;
+		background-position: 54%;
+		height: 738px;
+	}
+	.story-hero-caption {
+		position: absolute;
+		bottom: 63px;
+		left: 13%;
+		padding: 0 5%;
+		@media (max-width: 1440px) {
+		 	left: 8%;
+		 }
+		 @media (min-width: 1024px) and (max-width: 1280px) {
+		 	left: 2%;
+		 }
+		 @media (max-width: 1024px) {
+		 	padding: 0 70px 0 0;
+		 }
+		 @media (min-width: 320px) and (max-width: 680px) {
+		 	left: 0;
+			bottom: 134px;
+			padding: 0 15px;
+		 }
+		h2 {
+			font-size: 60px;
+			line-height: 40px;
+			@media (max-width: 1024px) {
+				line-height: 50px;
+			}
+			@media (min-width: 320px) and (max-width: 680px) {
+				font-size: 42px;
+				line-height: 38px;
+			}
+		 }
+		 p {
+		    color: $white;
+		    font: 22px 'PFDinTextPro-Medium';
+		    @media (min-width: 320px) and (max-width: 680px) {
+		    	font-size: 18px;
+		    }
+		 }
+		 .cta {
+		 	margin: 50px auto 0;
+		 }
+	}
+}
+.recipes-hero {
+	background: url(../img/recipe-hero.jpg) no-repeat;
+	box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+	height: 165px;
+	padding: 0;
+	h1 {
+		color: $header-color;
+		font: 67px 'pf_din_text_comp_promedium';
+		letter-spacing: -1px;
+		margin: 0;
+		padding: 65px 0 0 100px;
+		@media (max-width: 1024px) {
+			font-size: 60px;
+			padding: 73px 0 0 37px;
+		}
+		@media (max-width: 750px) {
+			padding-left: 15px;
+		}
+	}	
+}
+.bdg-original-hero {
+	background: url(../img/buddig-original-hero.jpg) 100% 0 no-repeat;
+	background-size: cover;
+	box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+	color: $white;
+	height: 650px;
+	padding: 100px 0 0 0;
+	.hero-caption {
+		padding: 0;
+		width: 715px;
+		h1 {
+         margin: 0;
+		 .text-one {font-size: 122px; padding-left: 215px; letter-spacing: -2px;}
+		 .text-two {font-size: 245px; padding-left: 109px; line-height: 0; letter-spacing: -16px;}
+		 .text-three {font-size: 157px; line-height: 108px; letter-spacing:-7px; padding: 0 0 0 53px;}
+		 .text-four {font-size: 250px; padding-left: 217px; line-height: 86px; letter-spacing: -17px;}
+		}
+	}
+}
+
+
+/*************************************** 
+		CALL-TO-ACTION BUTTONS 
+*****************************************/
+.hero-cta {
+	background: linear-gradient($red-light, $red-med);
+	color: $white;
+	display: block;
+	font: 23px 'bebas_neueregular';
+	height: 68px;
+	line-height: 3;
+	margin-left: 14%;
+	text-align: center;
+	width: 257px;
+	i {
+		font-size: .750em;
+		padding-left: 30px;
+		width: auto;
+	}
+	&:hover {
+		background: $red-light;
+	}
+}
+.cta {
+	@extend .hero-cta;
+	height: 57px;
+	margin: 30px 0 0 0;
+	line-height: 2.5;
+	width: 219px;
+	@media (min-width: 320px) and (max-width: 680px) {
+	 	width: 100%;
+	}
+	@media (max-width: 359px) {
+		margin: 0 auto;
+		width: 230px;
+	}
+}
+.cta-clear {
+	border: 2px $white solid;
+	color: $white;
+	display: block;
+	font: 22px 'bebas_neueregular';
+	height: 59px;
+	line-height: 2.5;
+	margin: 188px 0 0 7%;
+	text-align: center;
+	width: 257px;
+	i {
+		font-size: .750em;
+		padding-left: 30px;
+		width: auto;
+	}
+	&:hover {
+		background: rgba(250, 250, 250, .3);
+	}
+}
+
+/*************************************
+			CONTENT
+**************************************/
+
+.breadcrumb {
+	background: transparent;
+	margin: 0;
+	padding: 25px 0;
+	li {
+		a {
+			color: $gray-light;
+			font: 12px 'PFDinTextPro-Medium';
+			text-transform: uppercase;
+			&:hover {text-decoration: underline;}
+		}
+	}
+	@media (max-width: 1024px) {
+		display: none;
+		}
+}
+
+.dashboard {
+    background: $white;
+	padding: 100px;
+	font-size: 0; /*fixes pacing issue*/
+	@media (max-width: 1024px) {
+		padding: 50px 15px;
+	}
+	> article {
+		border: 1px $gray-light solid;
+		display: inline-block;
+		height: 515px;
+		margin-right: 1.8%;
+		max-width: 319px;
+		vertical-align: top;
+		width: 23.5%;
+		&:last-child {margin-right:0;}
+		@media (max-width: 1024px) {
+			height: auto;
+			margin: 0 1% 2.5%; 
+			max-width: none;
+			padding-bottom: 20px;
+			width: 48%;
+		}
+		@media (min-width: 320px) and (max-width: 680px) {
+			margin: 0 0 30px 0; 
+			width: 100%;
+		}
+		figure {
+			margin: 0;
+		}
+		h3 {
+			color: $gray;
+			font: bold 18px "bebas_neueregular";
+		}
+		h4 {
+			color: $header-color;
+			font: 30px 'pf_din_text_comp_promedium';
+			line-height: 33px;
+			margin: 14px auto;
+		}
+		p, h3, h4 {padding: 0 20px;}
+		.cta-white {
+			color: $header-color;
+			display: block;
+			font: bold 20px "bebas_neueregular";
+			margin: 34px 20px 0 0;
+			text-align: right;
+			i {padding-left: 16px;}
+		}
+	}
+}
+
+.social-media {
+	background: $white;
+	font-size: 0;
+	padding: 58px 100px;
+	@media (max-width: 1024px) {
+		display: none;
+	}
+	@media (min-width: 320px) and (max-width: 680px) {
+		padding: 30px 40px;
+	}
+	 > div {
+		display: inline-block;
+		padding: 0 1.5% 0 0;
+		width: 23.8%;
+		max-width: 322px;
+		overflow: hidden;
+		&:last-child {margin-right: 0;}
+		@media (min-width: 320px) and (max-width: 680px) {
+			margin: 0;
+			padding: 0 0 20px 0;
+			width: 100%;
+		}
+		img {
+			-webkit-transition: all .2s;
+    		-moz-transition: all.2s;
+    		-ms-transition: all .2s;
+			&:hover {
+				-webkit-transform: matrix(1.04, 0, 0, 1.04, 0, 0);
+				-moz-transform: matrix(1.04, 0, 0, 1.04, 0, 0);
+				-ms-transform: matrix(1.04, 0, 0, 1.04, 0, 0);
+			}
+		}
+	}
+}
+.recipes {
+	background: $white;
+	padding: 0 100px;
+	@media (max-width: 1024px) {
+		padding: 0 15px;
+		width: 100%;
+	}
+	h3 {
+		color: #787878;
+		font-size: 24px;
+		margin: 0; 
+		padding: 30px 0;
+		@media (max-width: 400px) {
+			text-align: center;
+		}
+	}
+	.recipe-features {
+			> div {
+				display: inline-block; 
+				max-width: 662px;
+			}
+		}
+	.narrow-search {
+		padding: 37px 15px;
+		.search-form {
+			border: 1px $gray-light solid;
+			color: $header-color;
+			padding: 20px;
+			label, input {display: inline-block;}
+			label {
+				font: 16px 'PFDinTextPro-Medium';
+				margin-right: 10px;
+				}
+			input[type=checkbox] {
+				font-size: 14px;
+				}
+			select {
+				border: 1px $gray-light solid;
+				font: 12px Verdana, Helvetica, sans-serif;
+				height: 30px;
+				margin: 0 16px 0 5px;
+				padding: 5px;
+				width: 168px;
+			}
+		}
+	}
+	.recipe-list {
+		font-size: 0;
+		color: $gray;
+		padding: 0 5px;
+		.meal-item {
+			border: 1px $gray-light solid;
+			margin-bottom: 40px;
+			h2 {
+				color: $header-color;
+				font-size: 24px;
+				margin: 30px 0;
+				padding: 0 15px;
+				text-align: center;
+
+			}
+			.meal-caption {
+				padding: 25px 0;
+				p {
+					font-size: 11px;
+					display: inline-block;
+					margin: 0;
+					padding: 0 13px;
+					width: 50%;
+					&:last-child {
+					text-align: right;
+					}
+					i {display: inline-block; padding-right: 5px;}
+				}
+			}
+		}
+		.col-xs-6 {
+			@media (max-width: 400px) {
+				width: 100%;
+			}
+		}
+	}
+
+}
+.breadcrumb li a.active {color: $header-color;}
+.item {padding: 0 10px;}
+
+.recipe-info {
+	margin: 0;
+	figure {
+		background: url(../img/recipes-detail-fpo.jpg) no-repeat;
+		display: inline-block;
+	    padding: 0;
+	    height: 712px;
+	    margin: 0;
+		max-width: 1081px;
+	}
+	.recipe-details {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		@media (max-width: 992px) {
+			max-width: 100%;
+		}
+		h2 {
+			background: #800a0c;
+			color: $white;
+			display: block;
+			margin: 0;
+			height: 146px;
+			padding: 20px;
+		}
+		#tabs {
+			background: $white;
+			font-family: Verdana, Helvetica, sans-serif;
+			height: 505px;
+			color: $gray;
+			
+			.tabs-nav {
+				font-size: 0;
+				padding: 0;
+				li {
+					border-right: 2px $white solid;
+					display: inline-block;
+					width: 33.3333%;
+					&:first-child {margin-left: 0;}
+				}
+				a {
+					background: #eee;
+					color: $gray;
+					display: block;
+					font-size: 16px;
+					line-height: 2.5;
+					height: 106px;
+					padding: 25px 10px;
+					text-align: center;
+					&:hover {background: $white;}
+					i {
+						display: block;
+						font-size: 32px;
+					}
+				}
+				.current {background: $white;}
+			}
+			.tab-section {
+				font-size: 13px;
+				padding: 20px 0;
+				overflow-y: auto;
+			}
+			#tabs-1 {
+				.ingredients {
+					list-style: disc;
+					li {margin-bottom: 8px;}
+				}
+			}
+		}
+		.recipe-caption {
+			background: #800a0c;
+			height: 61px;
+			padding: 20px;
+			p {
+				color: $white;
+				font-size: 15px;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				width: 30%;
+				&:last-child {
+				text-align: right;
+				}
+				i {
+					display: inline-block; 
+					padding-right: 5px;
+				  }			
+			}
+		}
+	}
+}
+.fb-comments {
+	background: $white;
+	height: 300px;
+	margin: 0;
+}
+.products-header {
+	@extend .recipes-hero;
+	background: url(../img/products-hero.jpg) no-repeat;
+}
+.products {
+	.products-hero {
+		background: #eee;
+		height: 336px;
+		position: relative;
+		.breadcrumb {
+			padding: 25px 0 0 100px;
+	}
+	.hero-text {
+		top: 90px;
+		left: 30%;
+		position: absolute;
+		width: 570px;
+		h2 {
+			color: $header-color;
+			letter-spacing: -2px;
+			margin-top: 0;
+			@media (max-width: 750px) {
+		    	font-size: 40px;
+		    }
+		}
+		@media (max-width: 1170px) {
+			 left: 100px;
+			 width: 50%;
+		}
+		@media (max-width: 992px) {
+		  	padding: 25px 30px;
+		    position: initial;
+		    width: 70%;
+		}
+		@media (max-width: 750px) {
+		    padding: 25px 15px;
+		    width: 100%;
+		}
+	}
+}
+.family-favorites {
+	background: #999;
+	padding: 68px 100px 80px;
+	h2 {
+		color: $white;
+		letter-spacing: -1px;
+		line-height: 1;
+		margin: 0;
+		padding: 0 0 10px 60px;
+		@media (max-width: 1170px) {
+		    padding-left: 0;
+		}
+		@media (max-width: 750px) {
+		   font-size: 40px;
+		}
+	}
+	p {
+		color:$white;
+		padding-left: 60px;
+		width: 75%;
+		@media (max-width: 1170px) {
+		    padding-left: 0;
+		}
+		@media (max-width: 750px) {
+		    width: 100%;
+		}
+	}
+	.products-display {
+		margin-top: 50px;
+		> div {
+			display: inline-block;
+			max-width: 664px;
+			margin-bottom: 15px;
+			padding: 0 20px 0 0;
+			@media (max-width: 750px) {
+				padding: 0 15px;
+			}
+		}
+	}
+	@media (max-width: 750px) {
+		padding: 30px 15px;
+	}
+}
+.find-store {
+	background: $white;
+	height: 473px;
+	position: relative;
+	.find-store-caption {
+		top: 124px;
+		left: 160px;
+		position: absolute;
+		@media (max-width: 1170px) {
+			top: 75px;
+			left: 104px;
+		}
+		@media (max-width: 750px) {
+		    padding: 30px 15px;
+		    position: initial;
+		}
+		h2 {
+			color: $header-color;
+			margin: 0 0 20px;
+			letter-spacing: -2px;
+			@media (max-width: 750px) {
+		    	font-size: 40px;
+		    }
+		}
+		p {width: 80%;}
+		.cta {
+			@media (max-width: 750px) {
+				margin-top: 40px;
+				width: 100%;
+			}
+		}
+	  }
+	}
+}
+
+.product-search {
+	background: #faf8eb;
+	height: 400px;
+	.search-bar {
+		background: #f6f3df;
+		box-shadow: inset 0 10px 10px -10px rgba(221,207,180,0.8), inset 0 -10px 10px -10px rgba(221,207,180,0.8);
+		height: 102px;
+		padding: 30px 0 0 100px;
+		span {
+			color: $header-color;
+			font-size: 14px;
+			margin-right: 20px;
+		}
+		.flavor {
+			background: linear-gradient(#fe0000, #ac0807);
+			border: 0;
+			border-radius: 5px 0 0 5px;
+			color: $white;
+			font-size: 12px;
+			height: 43px;
+			margin-right: -4px;
+			width: 124px;
+		}
+		.size {
+			@extend .flavor;
+			background: $gray-light;
+			border-radius: 0 5px 5px 0;
+			color: $gray;
+		}
+	}
+}
+.product-group {
+	background: $white;
+	padding: 70px 0;
+	@media (max-width: 992px) {
+		padding-top: 70px;
+	}
+	> div {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 15px;
+		width: 48%;
+		@media (max-width: 1024px) {
+			text-align: center;
+		 	width: 100%;
+		}
+	}
+	.breadcrumb {
+	 	padding: 25px 0 66px 100px;
+	}	
+	h2 {
+		color: $header-color;
+		font-size: 40px;
+		letter-spacing: -1px;
+		line-height: 37px;
+		margin: 13px 0 20px 0;
+	}
+	.prod-photo {
+		display: block; 
+		padding: 0 0 0 47px;
+		@media (max-width: 1024px) {
+			padding: 0;
+		}
+	}
+	.cta {
+		@media (max-width: 1024px) {
+			margin: 0 auto;
+		}
+	}
+}
+.original-header {
+	@extend .recipes-hero;
+	background: url(../img/original-beef-hero.jpg) no-repeat;
+	h1 {color: $white;}
+}
+.product-variety {
+	padding: 0 100px;
+	margin: 0 0 30px 0;
+	@media (max-width: 1024px) {
+		padding: 70px 15px 0;
+		width: 100%;
+	}
+	.breadcrumb {
+	 	padding-bottom: 66px ;
+	}
+	.display {
+		display: inline-block;
+		padding-top: 47px;
+		padding-right: 0;
+		padding-left: 0;
+		margin-top: -45px;
+		vertical-align: top;
+		max-width: 550px;
+		@media (max-width: 800px) {
+			margin-bottom: 50px;
+			max-width: 100%;
+			width: 100%;
+		}
+		.slide {
+			display: table;
+			@media (max-width: 800px) {
+				margin: 0 auto;
+		}
+			.left-arrow {
+				display: table-cell;
+				max-width: 52px;
+				vertical-align: middle;
+			}
+			.slide-view {
+				max-width: 341px;
+				margin: 0 10px;
+				overflow: hidden;
+			}
+			.right-arrow {
+				@extend .left-arrow;
+			}
+		}
+		.cycle-pager {
+			font-size: 0;
+			margin: 0;
+			padding: 55px 0 0 0;
+			@media (max-width: 800px) {
+				margin: 0 auto;
+				width: 68%; 
+			}
+			a {
+				background: $gray-light;
+				 display: inline-block;
+				 color: $white;
+				 font: 20px/20px "bebas_neueregular";
+				 line-height: 17px;
+				 height: 60px;
+				 margin-right: 6%;
+				 max-width: 110px;
+				 width: 20%;
+				 padding: 18px 5px;
+				 text-align: center;
+				 vertical-align: top;
+				 &:hover {background: $header-color;}
+				 &:last-child {
+				 	margin-right: 0;
+				 	padding: 6px 8px;
+				 }
+			  }
+			  .cycle-pager-active {background: $header-color;}
+			}
+		}
+
+	.nutrition {
+		display: inline-block;
+		max-width: 780px;
+		text-align: center;
+		@media (max-width: 800px) {
+			width: 100%;
+		}
+		.facts {
+			display: inline-block;
+			max-width: 279px;
+			min-width: 250px;
+		}
+	}
+	.contents {
+		display: inline-block;
+		@media (max-width: 1280px) {
+			padding-left: 40px;
+		}
+		@media (max-width: 1199px) {
+			margin-top: 30px;
+			clear: both;
+			padding-left: 15px;
+			width: 100%
+		}
+		h2 {
+			color: $header-color;
+			font-size: 24px;
+			@media (max-width: 1199px) {
+				float: left;
+			}
+			@media (max-width: 800px) {
+				float: none;
+				text-align: center;
+			}
+		}
+		p {
+			@media (max-width: 1199px) {
+				clear: left;
+				float: left;
+				width: 50%;
+			}
+			@media (max-width: 800px) {
+				clear: none;
+				float: none;
+				text-align: center;
+				width: 100%;
+			}
+		}
+		img {
+			display: block;
+			max-width: 381px;
+			@media (max-width: 1199px) {
+				float: right;
+				margin-top: -50px;
+				width: 300px;
+			}
+			@media (max-width: 800px) {
+				float: none;
+				margin: 0 auto;
+			}
+		}
+	}
+	.call-btn {
+		float: right;
+		margin: 20px 0 0 0;
+		padding-left: 83px;
+		@media (max-width: 1600px) {
+			padding-left: 10px;
+		}
+		@media (max-width: 1199px) {
+			margin: 50px 0 0 0;
+			width: 100%;
+		}
+		@media (max-width: 800px) {
+			margin-top: 0;
+		}
+		.cta-clear {
+			border-color: $header-color;
+			color: $header-color;
+			display: inline-block;
+			margin: 0 24px 0 0; 
+			width: 200px;
+			@media (max-width: 1199px) {
+				margin-right: 0;
+				width: 282px;
+			}
+			@media (max-width: 800px) {
+				margin-top: 25px;
+				width: inherit;
+			}
+		}
+	}	
+}
+.family-fun {
+	background: $white;
+	padding: 0 100px;
+	@media (max-width: 1024px) {
+		padding: 0 15px;
+		width: 100%;
+	}
+	.intro {
+		padding: 25px 0;
+		header {
+		@media (max-width: 400px) {
+				width: 100%;
+			 }
+		  h2 {
+			color: $header-color;
+			letter-spacing: -1px;
+			margin: 0 0 20px 0;
+			word-spacing: -2px;
+		   }
+			p {
+			font-size: 13px;
+			width: 79%;
+			@media (max-width: 992px) {
+				width: 100%;
+			 }
+		   }
+		}
+		.share-tips {
+			float: right;
+			text-align: right;
+			max-width: 321px;
+			@media (max-width: 400px) {
+				max-width: none;
+				margin-top: 25px;
+				width: 100%;
+			 }
+			a {
+				border: 1px $gray-light solid;
+				display: block;
+			}
+		}
+  	}
+}
+.tips-tricks-header {
+	@extend .recipes-hero;
+	background: url(../img/tips-tricks-header.jpg) no-repeat;
+}
+.family-dashboard {
+	article {
+		border: 1px $gray-light solid;
+		margin-bottom: 40px;
+		padding-bottom: 15px;
+		h3 {
+			color: $gray;
+			font: bold 18px "bebas_neueregular";
+			padding: 0 15px;
+		}
+		h4 {
+			color: $header-color;
+			font: 30px 'pf_din_text_comp_promedium';
+			line-height: 33px;
+			padding: 0 15px;
+		}
+		p {padding: 0 15px;}
+		.read-more {
+			color: $header-color;
+			display: block;
+			font: bold 20px "bebas_neueregular";
+			margin: 34px 20px 0 0;
+			text-align: right;
+			i {padding-left: 16px;}
+		}
+	}
+	.col-xs-6 {
+		@media (max-width: 400px) {
+			width: 100%;
+		}
+	}
+}
+.share-recipes {
+	padding: 0 100px;
+	@media (max-width: 1024px) {
+		padding: 0 15px;
+		width: 100%;
+	}
+	.intro {
+		padding: 25px 0;
+		header {
+		@media (max-width: 400px) {
+				width: 100%;
+			 }
+		  h2 {
+			color: $header-color;
+			letter-spacing: -1px;
+			margin: 0 0 20px 0;
+			word-spacing: -2px;
+		   }
+			p {
+			font-size: 13px;
+			width: 79%;
+			@media (max-width: 992px) {
+				width: 100%;
+			 }
+		   }
+		}
+  	}
+  	.share-form {
+  		display: inline-block;
+		width: 80%;
+		@media (max-width: 400px) {
+			width: 100%;
+		}
+		> div {
+			padding-left: 0;
+			@media (max-width: 400px) {
+				padding: 0;
+				width: 100%;
+			}
+		}
+		.cta-clear {
+			color: $header-color;
+			border-color: $header-color;
+			margin: 0;
+			width: 100%;
+		}
+
+	}
+}
+
+/***************************************
+				FOOTER
+****************************************/
+
+footer {
+	background: #45111d url(../img/footer-bg.jpg) repeat-x;
+	font: 14px Arial, Helvetica, sans-serif;
+	height: 226px;
+	@media (max-width: 800px) {
+		height: 100%;
+	}
+}
+.footer-nav {
+	margin: 0 auto;
+	max-width: 1550px;
+	padding: 58px 0 0 100px;
+	width: 81.45%;
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+		visibility: hidden;
+	}
+	@media (max-width: 1440px) {
+		padding-left: 20px;
+	}
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+	@media (max-width: 800px) {
+		padding: 30px 15px;
+	}
+	.cta-clear {
+		border: 1px $footer-link-color solid;
+		color: $white;
+		float: left;
+		font: 22px 'bebas_neueregular';
+		line-height: 2.5;
+		margin: 0;
+		width: 200px;
+		&:hover {text-decoration: none;}
+		@media (max-width: 1170px) {
+			width: 20%;
+		}
+		@media (max-width: 800px) {
+			margin-bottom: 20px;
+			width: 100%;
+		}
+	}
+	.social-icons {
+		font-size: 0;
+		float: right;
+		padding-left: 0;
+		@media (max-width: 1440px) {
+			padding: 6px 0 0 0;
+			margin: 0;
+		}
+		@media (max-width: 1280px) {
+			padding-top: 0;
+			width: 139px;
+		}
+		@media (max-width: 800px) {
+			float: none !important;
+			margin: 0 auto 20px;
+			padding-top: 0;
+			width: 240px;
+		}
+		li {
+			display: inline-block;
+			padding-right: 6px;
+			margin-right: 12px;
+			width: 75px;
+			@media (max-width: 1440px) {
+				padding-right: 27px;
+				margin-right: -10px;
+			}
+			@media (max-width: 1280px) {
+				margin: -14px -16px 20px 0;
+			}
+			@media (max-width: 800px) {
+				margin: 0 -16px 0 0;
+			}
+	
+		  a {
+			 background: transparent; 
+				border: 2px $footer-link-color solid;
+				border-radius: 40px;
+				display: block;
+				font-size: 32px;
+				padding: 18% 0;
+				text-align: center;
+				&:hover {background: $red-light;}
+				@media (max-width: 1440px) {
+					font-size: 24px;
+					padding: 16% 0;
+				}
+			i {
+				color: $footer-link-color;
+			 }
+		   }
+		}
+	}
+	.footer-links {
+		display: inline-block; 
+		margin: 20px 0 0 0;
+		padding: 0;
+		@media (max-width: 800px) {
+			display: initial;
+			margin: 30px 0 20px;
+			padding: 0;
+			width: 100%;
+		}
+		li {
+			border-right: 1px $white solid;
+			display: inline-block;
+			padding: 0 11px;
+			@media (max-width: 1440px) {
+				padding: 0 12px;
+			}
+			@media (max-width: 800px) {
+				border: 1px #ddc1ab solid;
+				display: block;
+				margin-bottom: 12px;
+				text-align: center;
+			}
+			&:last-child {
+			border-right: 0;
+		  }
+		  a {
+			color: $footer-link-color;
+			display: block;
+			&:hover {text-decoration: underline;}
+			@media (max-width: 1280px) {
+				font-size: 12px;
+			}
+			@media (max-width: 800px) {
+				font: 22px 'bebas_neueregular';
+				padding: 20px;
+				&:hover {text-decoration: none;}
+			}
+		  }
+		}
+	}
+	p {
+		color: $copyright-color;
+		clear: both;
+		font-size: 12px;
+		float: left;
+		margin-top: 60px;
+		@media (max-width: 1280px) {
+			margin-top: 25px;
+		} 
+		@media (max-width: 800px) {
+			float: none;
+			margin-top: 0;
+			text-align: center;
+		}
+	}
+}
