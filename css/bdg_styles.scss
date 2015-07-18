@@ -222,41 +222,41 @@ h2 {
 	ul {
 		li {
 			> .mega-menu {
-				background: $white;
-				background:rgba(255,255,255,0.95);
-				box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), 0 20px 20px -20px rgba(0,0,0,1);
-				display: none;
-				margin: 0;
-				padding: 70px 0;
-				position: absolute;
-				top: 78px;
-				left: 0;
-			 	width: 100%;
-			 	z-index: 200;
-			 	ul {
-			 	padding: 0 80px;
-			 	float: left;
-			 		li {
-			 			margin: 0 0;
-			 			padding: 8px 8px 0;
-			 			&:last-child {margin-right: 0;}
-			 			&:hover {background: #ddd;}
-					 	a {
+			background: $white;
+			background:rgba(255,255,255,0.95);
+			box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8), 0 20px 20px -20px rgba(0,0,0,1);
+			display: none;
+			margin: 0;
+			padding: 70px 0;
+			position: absolute;
+			top: 78px;
+			left: 0;
+			 width: 100%;
+			 z-index: 200;
+			 ul {
+			 padding: 0 80px;
+			 float: left;
+			 	li {
+			 		margin: 0 0;
+			 		padding: 8px 8px 0;
+			 		&:last-child {margin-right: 0;}
+			 		&:hover {background: #ddd;}
+					 a {
+					 	background: none;
+					 	color: $header-color;
+					 	height: auto;
+					 	padding: 0;
+					 	text-align: right;
+					 	&:hover {
 					 		background: none;
-					 		color: $header-color;
-					 		height: auto;
-					 		padding: 0;
-					 		text-align: right;
-					 		&:hover {
-					 			background: none;
-					 			color: $red-light;
-					 		}
+					 		color: $red-light;
 					 	}
-				 	}
-			    }
-			}
-		}
-	}
+					 }
+				 }
+			   }
+		     }
+	       }
+	    }
 }
 
 
@@ -555,11 +555,17 @@ h2 {
 	margin: 0;
 	padding: 25px 0;
 	li {
+		font: 12px 'PFDinTextPro-Medium';
+		text-transform: uppercase;
 		a {
 			color: $gray-light;
-			font: 12px 'PFDinTextPro-Medium';
-			text-transform: uppercase;
-			&:hover {text-decoration: underline;}
+			&:hover {
+				color: darken($gray-light, 10%);
+				text-decoration: underline;
+			}
+		}
+		&:last-child {
+			color: $header-color;
 		}
 	}
 	@media (max-width: 1024px) {
@@ -743,12 +749,23 @@ h2 {
 .recipe-info {
 	margin: 0;
 	figure {
-		background: url(../img/recipes-detail-fpo.jpg) no-repeat;
+		background: url(../img/recipes-detail-fpo.jpg) 33% 100% no-repeat;
+		background-size: cover;
 		display: inline-block;
 	    padding: 0;
 	    height: 712px;
 	    margin: 0;
 		max-width: 1081px;
+		@media (max-width: 1199px) {
+			background-position: 40% 100%;
+			height: 450px;
+		}
+		@media (max-width: 400px) {
+			height: 400px;
+		}
+		@media (max-width: 320px) {
+			height: 300px;
+		}
 	}
 	.recipe-details {
 		display: inline-block;
@@ -761,9 +778,16 @@ h2 {
 			background: #800a0c;
 			color: $white;
 			display: block;
+			font-size: 42px;
 			margin: 0;
 			height: 146px;
 			padding: 20px;
+			@media (max-width: 1199px) {
+				height: 95px;
+			}
+			@media (max-width: 400px) {
+				font-size: 32px;
+			}
 		}
 		#tabs {
 			background: $white;
@@ -1274,23 +1298,53 @@ h2 {
 		}
 	}
 }
+.share-recipes-header {
+	@extend .recipes-hero;
+	h1 {
+		@media (max-width: 750px) {
+			padding-top: 58px;
+			padding-left: 30px;
+		}
+		@media (max-width: 400px) {
+			font-size: 48px;
+			padding-top: 70px;
+			padding-left: 15px;
+		}
+		@media (max-width: 320px) {
+			font-size: 42px;
+			padding-top: 70px;
+			padding-left: 15px;
+		}
+	}
+}
 .share-recipes {
-	padding: 0 100px;
+	padding: 30px 100px;
+	position: relative;
 	@media (max-width: 1024px) {
-		padding: 0 15px;
+		padding: 0 30px;
 		width: 100%;
+	}
+	@media (max-width: 400px) {
+		padding: 0 15px;
 	}
 	.intro {
 		padding: 25px 0;
 		header {
-		@media (max-width: 400px) {
+		@media (max-width: 750px) {
 				width: 100%;
 			 }
 		  h2 {
 			color: $header-color;
+			line-height: 1;
 			letter-spacing: -1px;
 			margin: 0 0 20px 0;
 			word-spacing: -2px;
+			@media (max-width: 1024px) {
+				font-size: 40px;
+			}
+			@media (max-width: 320px) {
+				font-size: 34px;
+			}
 		   }
 			p {
 			font-size: 13px;
@@ -1301,24 +1355,74 @@ h2 {
 		   }
 		}
   	}
+  	.product-vanity {
+  		display: inline-block;
+  		margin-top: -110px;
+  		vertical-align:top;	
+  		width: 39%;
+  		@media (max-width: 1280px) {
+  			display: initial;
+  			position: absolute;
+  			top: 243px;
+  			right: 109px;
+  			width: 20%;
+  		}
+  		@media (max-width: 1270px) {
+  			width: 26%;
+  		}
+  		@media (max-width: 1024px) {
+  			top: 130px;
+  			right: 46px;
+  		}
+  		@media (max-width: 992px) {
+  			top: 170px;
+  			width: 30%;
+  		}
+  		@media (max-width: 750px) {
+  			display: none;
+  		}
+  	}
   	.share-form {
   		display: inline-block;
-		width: 80%;
-		@media (max-width: 400px) {
+  		padding-bottom: 50px;
+		width: 60%;
+		@media (max-width: 1280px) {
 			width: 100%;
 		}
 		> div {
 			padding-left: 0;
-			@media (max-width: 400px) {
+			margin-bottom: 30px;
+			@media (max-width: 750px) {
 				padding: 0;
 				width: 100%;
 			}
+			label {
+				font: 13px Verdana, helvetiva, sans-serif;
+			}
+			input, select, textarea {
+				font-size: 12px;
+			}
+			input[type=submit] {
+				font-size: 22px;
+			}
+			input[type=checkbox] {
+				top: -2px;
+			}
 		}
+		p {
+			color: #999;
+			font: 11px Verdana, helvetiva, sans-serif;
+		  }
 		.cta-clear {
 			color: $header-color;
 			border-color: $header-color;
 			margin: 0;
+			max-width: 200px;
 			width: 100%;
+		}
+		.cta {
+			border: 0;
+			margin-top: 30px;
 		}
 
 	}

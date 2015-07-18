@@ -131,7 +131,7 @@
 	</header> <!-- End Navbar -->
 	<div class="container">
 		<div>
-			<div class="recipes-hero">
+			<div class="share-recipes-header">
 				<h1>Share Your Recipes</h1>
 			</div>
 		</div>
@@ -140,41 +140,49 @@
 				<ul class="breadcrumb">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="#">Recipes</a></li>
-					<li><a href="#" class="active">Share Your Recipes</a></li>
+					<li class="active">Share Your Recipes</li>
 				</ul>
 				<div class="intro row">
-					<header class="col-xs-6 col-lg-9">
+					<header class="col-xs-6 col-md-9">
 						<h2>Show Off Your Culinary Creations</h2>
 						<p>We’re constantly impressed by the Buddig community’s creativity when it comes to whipping up delicious new dishes with your favorite Buddig meats. If you have a great recipe that you’d like to share with other Buddig-loving families, submit it here. Just don’t be surprised if it ends up on the recipes page of our website!</p>
 					</header>
 				</div>
+				<!-- Start Form -->
 				<form class="share-form">
 					<div class="form-group col-xs-6 col-md-6">
-						<label for="First Name">First Name</label>
+						<label for="First Name">First Name*</label>
 						<input type="text" name="firstName" class="form-control">
 					</div>
 					<div class="form-group col-xs-6 col-md-6">
-						<label for="Last Name">Last Name</label>
+						<label for="Last Name">Last Name*</label>
 						<input type="text" name="lastName" class="form-control">
 					</div>
 					<div class="form-group col-xs-12 col-md-12">
-						<label for="Email">Email</label>
+						<label for="Email">Email Address*</label>
 						<input type="email" name="email" class="form-control">
 					</div>
-					<div class="form-group col-md-3">
+					<div class="form-group col-xs-3 col-md-3">
 						<label for="Recipe Photo">Recipe Photo (Optional)</label>
 						<a href="#" class="cta-clear">Select Photo</a>
 					</div>
-					<div class="form-group col-md-4">
-						<label for="City">City</label>
+					<div class="form-group col-xs-3 col-md-4">
+						<label for="City">City*</label>
 						<input type="city" name="city" class="form-control">
 					</div>
-					<div class="form-group col-md-3">
+					<div class="form-group col-xs-3 col-md-3">
 						<label for="State">State/Province*</label>
-						<input type="state" name="state" class="form-control">
+						<select name="state" class="form-control">
+						  <option value=""></option>
+						  <option value="Alabama">Alabama</option>
+						  <option value="Alaska">Alaska</option>
+						  <option value="Arizona">Arizona</option>
+						  <option value="Arkansas">Arkansas</option>
+						  <option value="California">California</option>
+						</select>
 					</div>
-					<div class="form-group col-md-2">
-						<label for="Zip">Zip Code</label>
+					<div class="form-group col-xs-3 col-md-2">
+						<label for="Zip">Zip Code*</label>
 						<input type="zip" name="zip" class="form-control">
 					</div>
 					<div class="form-group col-xs-12 col-md-12">
@@ -189,7 +197,22 @@
 						<label for="Directions">Directions*</label>
 						<textarea  type="directions" name="directions" rows="5" class="form-control"></textarea>
 					</div>
+					<div class="form-group col-xs-12 col-md-12">
+						<p>*Required fields</p>
+						<p>Buddig respects your privacy and will not share or sell your information to anyone. View our Privacy Policy.</p>
+					</div>
+					<div class="form-group col-xs-12 col-md-6">
+						<label for="Signup" class="checkbox-inline">
+							<input type="checkbox" name="signup"> Please sign me up for the Buddig Lunch Club
+						</label>
+						
+					</div>
+					<div class="form-group col-xs-12 col-md-12">
+						<input type="submit" class="cta" value="Submit >">
+					</div>
 				</form>
+				<!-- End Form -->
+				<div class="product-vanity"><img src="img/dehli-dogs-vanity.png" alt=""></div>
 			</div>
 		</main>
 	</div>
