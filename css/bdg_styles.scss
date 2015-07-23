@@ -129,7 +129,7 @@ h2 {
 
 .navbar {
 	background: $red-navbar;
-	box-shadow: 0 20px 20px -20px rgba(0,0,0,1);
+	box-shadow: 0 20px 20px -20px rgba(0,0,0,0.8);
 	border: 0;
 	border-radius: 0;
 	margin: 0; 
@@ -216,7 +216,7 @@ h2 {
 		}
 }
 /****************************************
-			MEGA MENU
+		MEGA MENU & MOBILE MENU
 *****************************************/
 .nav-main {
 	ul {
@@ -258,7 +258,49 @@ h2 {
 	       }
 	    }
 }
-
+.mobile-nav {
+	background: #e2e2e2;
+	height: 100%;
+	position: fixed;
+	top: 78px;
+	right: -300px;
+	width: 300px;
+	z-index: 100;
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			border-bottom: 1px $white solid;
+			a {
+				background: url(../img/mobile-arrow.png) 95% 15px no-repeat;
+				color: $header-color;
+				display: block;
+				font: bold 24px "bebas_neueregular";
+				height: 50px;
+				line-height: 2;
+				padding: 0 15px;
+			}
+			ul {
+				background: #d4d4d4;
+				display: none;
+				li {
+					border-bottom: 1px #e2e2e2 solid;
+					&:first-child {border-top: 1px $white solid;}
+					&:last-child {border-bottom: 0;}
+					> a {
+					    background-image: none;
+						font-size: 20px;
+						padding-left: 30px;
+					}
+				}
+			}
+			.active {
+				background: #e2e2e2 url(../img/mobile-arrow.png) 95% 15px no-repeat;
+			}
+			.active:before {transform: rotate(90deg);}
+		}
+	}
+}
 
 
 /****************************************

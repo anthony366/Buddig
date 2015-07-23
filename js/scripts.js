@@ -13,6 +13,50 @@ $(document).ready(function() {
     //	$('.mm').slideToggle('slow');
     //	e.preventDefault();
    //});
+    $('.nav-icon').click(function(){
+        var slideoutMenu = $('.mobile-nav');
+        var pagebody = $('.container');      
+        // toggle open class
+        slideoutMenu.toggleClass("open");
+        
+        // slide menu
+        if (slideoutMenu.hasClass("open")) {
+            slideoutMenu.animate({
+                right: "0",
+                queue : false
+            });
+            pagebody.animate({
+                left: "-300px",
+                queue : false
+            });   
+        } else {
+            slideoutMenu.animate({
+                right: "-300px",
+                queue : false
+            });
+            pagebody.animate({
+                left: "0",
+                queue : false
+            }); 
+        }
+    });
+    // slide up menu items
+    $('.mobile-nav li a').click(function(){
+        if ($(this).attr('class') != 'active'){
+          $('.mobile-nav li ul').slideUp('slow');
+          $(this).next().slideToggle('slow');
+          $('.mobile-nav li a').removeClass('active');
+          $(this).addClass('active');
+      }
+  });
+    $(window).resize(function() {
+      windowsize = $(window).width();
+      if (windowsize > 1020) {
+          $('.mobile-nav').css('right', '-300px');
+          $('.container').css('left', '0px');
+      }
+    });
+
 
 
 });

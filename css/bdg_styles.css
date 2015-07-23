@@ -114,7 +114,7 @@ h2 {
 ******************************************/
 .navbar {
   background: #ac0b11;
-  box-shadow: 0 20px 20px -20px black;
+  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.8);
   border: 0;
   border-radius: 0;
   margin: 0;
@@ -221,7 +221,7 @@ h2 {
 }
 
 /****************************************
-			MEGA MENU
+		MEGA MENU & MOBILE MENU
 *****************************************/
 .nav-main ul li > .mega-menu {
   background: #fff;
@@ -260,6 +260,56 @@ h2 {
 .nav-main ul li > .mega-menu ul li a:hover {
   background: none;
   color: #e5050c;
+}
+
+.mobile-nav {
+  background: #e2e2e2;
+  height: 100%;
+  position: fixed;
+  top: 78px;
+  right: -300px;
+  width: 300px;
+  z-index: 100;
+}
+.mobile-nav ul {
+  padding: 0;
+  margin: 0;
+}
+.mobile-nav ul li {
+  border-bottom: 1px #fff solid;
+}
+.mobile-nav ul li a {
+  background: url(../img/mobile-arrow.png) 95% 15px no-repeat;
+  color: #ad1e2c;
+  display: block;
+  font: bold 24px "bebas_neueregular";
+  height: 50px;
+  line-height: 2;
+  padding: 0 15px;
+}
+.mobile-nav ul li ul {
+  background: #d4d4d4;
+  display: none;
+}
+.mobile-nav ul li ul li {
+  border-bottom: 1px #e2e2e2 solid;
+}
+.mobile-nav ul li ul li:first-child {
+  border-top: 1px #fff solid;
+}
+.mobile-nav ul li ul li:last-child {
+  border-bottom: 0;
+}
+.mobile-nav ul li ul li > a {
+  background-image: none;
+  font-size: 20px;
+  padding-left: 30px;
+}
+.mobile-nav ul li .active {
+  background: #e2e2e2 url(../img/mobile-arrow.png) 95% 15px no-repeat;
+}
+.mobile-nav ul li .active:before {
+  transform: rotate(90deg);
 }
 
 /****************************************
