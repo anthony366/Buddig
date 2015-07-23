@@ -22,7 +22,7 @@ $(document).ready(function() {
         // slide menu
         if (slideoutMenu.hasClass("open")) {
             slideoutMenu.animate({
-                right: "0",
+                right: "0px",
                 queue : false
             });
             pagebody.animate({
